@@ -11,6 +11,8 @@
 		4A8BCA8C27615DFC006C39BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8BCA8B27615DFC006C39BB /* ContentView.swift */; };
 		4A8BCA8E27615DFF006C39BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8BCA8D27615DFF006C39BB /* Assets.xcassets */; };
 		4A8BCA9127615DFF006C39BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8BCA9027615DFF006C39BB /* Preview Assets.xcassets */; };
+		4A8BCA9F2761631E006C39BB /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8BCA9E2761631D006C39BB /* ScanView.swift */; };
+		4ADDF8482784D08000452DDD /* ScanBarcodes in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADDF8472784D08000452DDD /* ScanBarcodes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,10 @@
 		4A8BCA8B27615DFC006C39BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A8BCA8D27615DFF006C39BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A8BCA9027615DFF006C39BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A8BCA9E2761631D006C39BB /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		4ADDF8492784D9D200452DDD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4ADDF84A2784DC5C00452DDD /* ScanBarcodesDemo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScanBarcodesDemo.jpg; sourceTree = "<group>"; };
+		4ADDF84B2784E0BE00452DDD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADDF8482784D08000452DDD /* ScanBarcodes in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +42,13 @@
 		4A8BCA7D27615DFC006C39BB = {
 			isa = PBXGroup;
 			children = (
+				4ADDF84B2784E0BE00452DDD /* .gitignore */,
+				4ADDF8492784D9D200452DDD /* README.md */,
+				4ADDF84A2784DC5C00452DDD /* ScanBarcodesDemo.jpg */,
+				4A8BCA9727615E2C006C39BB /* Packages */,
 				4A8BCA8827615DFC006C39BB /* ScanBarcodesDemo */,
 				4A8BCA8727615DFC006C39BB /* Products */,
+				4A8BCA9B2761611A006C39BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +65,7 @@
 			children = (
 				4A8BCA8927615DFC006C39BB /* ScanBarcodesDemoApp.swift */,
 				4A8BCA8B27615DFC006C39BB /* ContentView.swift */,
+				4A8BCA9E2761631D006C39BB /* ScanView.swift */,
 				4A8BCA8D27615DFF006C39BB /* Assets.xcassets */,
 				4A8BCA8F27615DFF006C39BB /* Preview Content */,
 			);
@@ -67,6 +80,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4A8BCA9727615E2C006C39BB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		4A8BCA9B2761611A006C39BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -75,6 +102,7 @@
 			buildConfigurationList = 4A8BCA9427615DFF006C39BB /* Build configuration list for PBXNativeTarget "ScanBarcodesDemo" */;
 			buildPhases = (
 				4A8BCA8227615DFC006C39BB /* Sources */,
+				4ADDF8452784C9D100452DDD /* Run SwiftLint */,
 				4A8BCA8327615DFC006C39BB /* Frameworks */,
 				4A8BCA8427615DFC006C39BB /* Resources */,
 			);
@@ -83,6 +111,9 @@
 			dependencies = (
 			);
 			name = ScanBarcodesDemo;
+			packageProductDependencies = (
+				4ADDF8472784D08000452DDD /* ScanBarcodes */,
+			);
 			productName = ScanBarcodesDemo;
 			productReference = 4A8BCA8627615DFC006C39BB /* ScanBarcodesDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 4A8BCA7D27615DFC006C39BB;
+			packageReferences = (
+				4ADDF8462784D08000452DDD /* XCRemoteSwiftPackageReference "ScanBarcodes" */,
+			);
 			productRefGroup = 4A8BCA8727615DFC006C39BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +166,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ADDF8452784C9D100452DDD /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A8BCA8227615DFC006C39BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +194,7 @@
 			files = (
 				4A8BCA8C27615DFC006C39BB /* ContentView.swift in Sources */,
 				4A8BCA8A27615DFC006C39BB /* ScanBarcodesDemoApp.swift in Sources */,
+				4A8BCA9F2761631E006C39BB /* ScanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -269,9 +325,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanBarcodesDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = PMRF36UC3V;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan Barcodes Demo needs to access the camera to scan barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,9 +355,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanBarcodesDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = PMRF36UC3V;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan Barcodes Demo needs to access the camera to scan barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4ADDF8462784D08000452DDD /* XCRemoteSwiftPackageReference "ScanBarcodes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nasa-jpl/ScanBarcodes.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4ADDF8472784D08000452DDD /* ScanBarcodes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ADDF8462784D08000452DDD /* XCRemoteSwiftPackageReference "ScanBarcodes" */;
+			productName = ScanBarcodes;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A8BCA7E27615DFC006C39BB /* Project object */;
 }
