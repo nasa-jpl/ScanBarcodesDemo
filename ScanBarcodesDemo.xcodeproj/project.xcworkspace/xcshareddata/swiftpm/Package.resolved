@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ScanBarcodes",
+        "repositoryURL": "https://github.com/nasa-jpl/ScanBarcodes.git",
+        "state": {
+          "branch": "main",
+          "revision": "86a7629b4e8e0941cbeedaaca063036ddb80ca31",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
